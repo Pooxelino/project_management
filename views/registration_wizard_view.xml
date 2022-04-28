@@ -1,0 +1,30 @@
+<odoo>
+
+        <record model="ir.ui.view" id="project_wizard_form_view">
+            <field name="name">wizard.form</field>
+            <field name="model">project_management.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Add Employees">
+                    <group>
+                        <field name="projects_ids"/>
+                        <field name="employee_ids"/>
+                    </group>
+                    <footer>
+                        <button name="subscribe" type="object"
+                                string="Subscribe" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="launch_project_wizard" model="ir.actions.act_window">
+            <field name="name">Add Employees</field>
+            <field name="res_model">project_management.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_project_management_projects"/>
+        </record>
+
+</odoo>

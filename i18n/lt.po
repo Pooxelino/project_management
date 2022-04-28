@@ -1,0 +1,365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 12:15+0000\n"
+"PO-Revision-Date: 2022-04-27 15:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_view_kanban
+msgid ""
+"<br/>\n"
+"                                End date:"
+msgstr "Pabaigos data:"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_view_kanban
+msgid ""
+"<br/>\n"
+"                                Start date:"
+msgstr "Pradžios data:"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__active
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+msgid "Active"
+msgstr "Aktyvus"
+
+#. module: project_management
+#: model:ir.actions.act_window,name:project_management.launch_project_wizard
+#: model_terms:ir.ui.view,arch_db:project_management.project_wizard_form_view
+msgid "Add Employees"
+msgstr "Pridėti darbuotoją"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_wizard_form_view
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+msgid "Client"
+msgstr "Klientas"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__clients_ids
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__clients_ids
+#, python-format
+msgid "Clients"
+msgstr "Klientai"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__color
+msgid "Color"
+msgstr "Spalva"
+
+#. module: project_management
+#: model:ir.ui.menu,name:project_management.configuration_menu
+msgid "Configuration"
+msgstr "Nustatymai"
+
+#. module: project_management
+#: model:ir.model,name:project_management.model_res_partner
+msgid "Contact"
+msgstr "Kontaktas"
+
+#. module: project_management
+#: model_terms:ir.actions.act_window,help:project_management.invoices_list_action
+msgid "Create the first invoice"
+msgstr "Sukurti pirmą sąskaitą"
+
+#. module: project_management
+#: model_terms:ir.actions.act_window,help:project_management.jobs_list_action
+msgid "Create the first job"
+msgstr "Sukurti pirmą darbą"
+
+#. module: project_management
+#: model_terms:ir.actions.act_window,help:project_management.projects_list_action
+msgid "Create the first project"
+msgstr "Sukruti pirmą projektą"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__create_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__create_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__create_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__create_uid
+msgid "Created by"
+msgstr "Sukurta (ko)"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__create_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__create_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__create_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__create_date
+msgid "Created on"
+msgstr "Sukurta (kada)"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__description
+#, python-format
+msgid "Description"
+msgstr "Aprašymas"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__display_name
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__display_name
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__display_name
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__display_name
+msgid "Display Name"
+msgstr "Rodyti vardą"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__duration
+#, python-format
+msgid "Duration"
+msgstr "Terminas"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model,name:project_management.model_hr_employee
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__employees_ids
+#, python-format
+msgid "Employee"
+msgstr "Darbuotojas"
+
+#. module: project_management
+#: model:ir.actions.act_window,name:project_management.employee_list_action
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__employee_ids
+#: model:ir.ui.menu,name:project_management.employees_menu
+msgid "Employees"
+msgstr "Darbuotojai"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__employees_count
+#, python-format
+msgid "Employees count"
+msgstr "Darbuotojų skaičius"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__end_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__end_date
+msgid "End Date"
+msgstr "Pabaigos data"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+msgid "Group By"
+msgstr "Grupuoti pagal"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__id
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__id
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__id
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.actions.act_window,name:project_management.invoices_list_action
+#: model:ir.model,name:project_management.model_project_management_invoices
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__invoices_ids
+#: model:ir.ui.menu,name:project_management.invoices_menu
+#, python-format
+msgid "Invoices"
+msgstr "Sąskaitos"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.actions.act_window,name:project_management.jobs_list_action
+#: model:ir.model,name:project_management.model_project_management_jobs
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__jobs_ids
+#: model:ir.ui.menu,name:project_management.jobs_menu
+#, python-format
+msgid "Jobs"
+msgstr "Darbai"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.invoices_form_view
+#: model_terms:ir.ui.view,arch_db:project_management.jobs_form_view
+msgid "Jobs form"
+msgstr "Darbai (nuo ko)"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices____last_update
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs____last_update
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects____last_update
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard____last_update
+msgid "Last Modified on"
+msgstr "Paskutinį kartą modifikuota"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__write_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__write_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__write_uid
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Paskutinį kartą atnaujinta (ko)"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__write_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__write_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__write_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__write_date
+msgid "Last Updated on"
+msgstr "Paskutinį kartą atnaujinta (kada)"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_hr_employee__manager
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__manager_ids
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+#, python-format
+msgid "Manager"
+msgstr "Vadovas"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__max_workers
+#, python-format
+msgid "Maximum workers"
+msgstr "Maksimalus darbuotojų skaičius"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__min_workers
+#, python-format
+msgid "Minimum workers"
+msgstr "Minimalus darbuotojų skaičius"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+msgid "Name and description"
+msgstr "Pavadinimas ir aprašymas"
+
+#. module: project_management
+#: model:ir.actions.act_window,name:project_management.partner_list_action
+#: model:ir.ui.menu,name:project_management.partners_menu
+msgid "Partners"
+msgstr "Partneriai"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__payment
+msgid "Payment"
+msgstr "Mokėjimai"
+
+#. module: project_management
+#: model:res.groups,name:project_management.group_project_manager
+msgid "Project Management / Manager"
+msgstr "Projekto valdymas / Vadovas"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_tree_view
+msgid "Project Tree"
+msgstr "Projektų medis"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_view_kanban
+msgid "Project name:"
+msgstr "Projekto pavadinimas:"
+
+#. module: project_management
+#: model:ir.actions.act_window,name:project_management.projects_list_action
+#: model:ir.model,name:project_management.model_project_management_projects
+#: model:ir.model.fields,field_description:project_management.field_hr_employee__projects_ids
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__projects_ids
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__projects_ids
+#: model:ir.model.fields,field_description:project_management.field_project_management_wizard__projects_ids
+#: model:ir.model.fields,field_description:project_management.field_res_partner__projects_ids
+#: model:ir.model.fields,field_description:project_management.field_res_users__projects_ids
+#: model:ir.ui.menu,name:project_management.projects_menu
+#: model_terms:ir.ui.view,arch_db:project_management.employee_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:project_management.partner_inherited_form_view
+msgid "Projects"
+msgstr "Projektai"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.projects_calendar_view
+msgid "Projects Calendar"
+msgstr "Projekto kalendorius"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.projects_form_view
+msgid "Projects form"
+msgstr "Projekto forma"
+
+#. module: project_management
+#: model:ir.ui.menu,name:project_management.main_projects_manager_menu
+#: model:ir.ui.menu,name:project_management.projects_manager_menu
+msgid "Projects manager"
+msgstr "Projektų valdymas"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_search_view
+msgid "Search view"
+msgstr "Paieška"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__start_date
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__start_date
+msgid "Start Date"
+msgstr "Pradžios data"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_wizard_form_view
+msgid "Subscribe"
+msgstr "Patvirtinti"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_invoices__name
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__name
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__name
+#, python-format
+msgid "Title"
+msgstr "Pavadinimas"
+
+#. module: project_management
+#: model:ir.model,name:project_management.model_project_management_wizard
+msgid "Wizard: Quick Registration of Employees to Projects"
+msgstr "Vedyls: greitas darbuotojų priskirimas projektams"
+
+#. module: project_management
+#: model:ir.model.fields,field_description:project_management.field_project_management_jobs__workers_ids
+msgid "Workers"
+msgstr "Darbuotojai"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_graph_view
+msgid "Workers by project"
+msgstr "Darbuotojai pagal projektą"
+
+#. module: project_management
+#: code:addons/project_management/models/projects.py:0
+#: model:ir.model.fields,field_description:project_management.field_project_management_projects__workers
+#, python-format
+msgid "Working %"
+msgstr "Dirbančių %"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_wizard_form_view
+msgid "or"
+msgstr "arba"
+
+#. module: project_management
+#: model_terms:ir.ui.view,arch_db:project_management.project_view_kanban
+msgid ""
+"title\n"
+"                                <br/>"
+msgstr "pavadinimas"

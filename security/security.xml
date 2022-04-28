@@ -1,0 +1,18 @@
+<odoo>
+    <record id="group_project_manager" model="res.groups">
+        <field name="name">Project Management / Manager</field>
+    </record>
+
+    <record id="only_responsible_can_modify" model="ir.rule">
+        <field name="name">Only Responsible Can Modify</field>
+        <field name="model_id" ref="model_project_management_projects"/>
+        <field name="groups" eval="[(4, ref('project_management.group_project_manager'))]"/>
+        <field name="perm_read" eval="0"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">
+            ['|', ('manager_ids', '=', False), ('manager_ids', '=', user.id)]
+        </field>
+    </record>
+</odoo>

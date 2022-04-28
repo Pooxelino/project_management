@@ -1,0 +1,194 @@
+<odoo>
+
+    <record model="ir.ui.view" id="projects_form_view">
+        <field name="name">project_management.projects</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <form string="Projects form">
+                <group>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="clients_ids"/>
+                    <field name="manager_ids"/>
+                    <field name="employees_ids"/>
+                    <field name="jobs_ids">
+                        <form>
+                            <group>
+                            <field name="name"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="workers_ids"/>
+                            </group>
+                        </form>
+                    </field>
+                    <field name="invoices_ids"/>
+                    <field name="max_workers"/>
+                    <field name="min_workers"/>
+                    <field name="duration"/>
+                    <field name="workers" widget="progressbar"/>
+                    <field name="active"/>
+                </group>
+
+
+<!--                <notebook colspan="4">-->
+<!--                    <page string="Description">-->
+<!--                        <group>-->
+<!--                            <field name="description"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="Sessions">-->
+<!--                        <group>-->
+<!--                            <field name="sessions_id">-->
+<!--                                <tree>-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="instructor_id"/>-->
+<!--                                    <field name="start_date"/>-->
+<!--                                    <field name="duration"/>-->
+<!--                                    <field name="seats"/>-->
+<!--                                    <field name="course_id"/>-->
+<!--                                </tree>-->
+<!--                                <form>-->
+<!--                                    <group>-->
+<!--                                        <field name="name"/>-->
+<!--                                        <field name="instructor_id"/>-->
+<!--                                        <field name="start_date"/>-->
+<!--                                        <field name="duration"/>-->
+<!--                                        <field name="seats"/>-->
+<!--                                    </group>-->
+<!--                                </form>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </notebook>-->
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_search_view">
+        <field name="name">project_management.projects</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <search string="Search view">
+                <field name="name"/>
+                <field name="description" string="Name and description" filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
+                <filter name="active" string="Active"
+                        domain="[('active', '=', True)]"/>
+                <group string="Group By">
+                    <filter name="group_by_manager" string="Manager"
+                            context="{'group_by': 'manager_ids'}"/>
+                    <filter name="group_by_client" string="Client"
+                            context="{'group_by': 'clients_ids'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_graph_view">
+        <field name="name">project_management.projects</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <graph string="Workers by project">
+                <field name="employees_ids"/>
+                <field name="employees_count"/>
+            </graph>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="project_tree_view">
+        <field name="name">project_management.projects</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <tree string="Project Tree" decoration-danger="duration&lt;30" decoration-info="duration&gt;90">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="clients_ids"/>
+                <field name="manager_ids"/>
+                <field name="employees_ids"/>
+                <field name="jobs_ids"/>
+                <field name="invoices_ids"/>
+                <field name="max_workers"/>
+                <field name="min_workers"/>
+                <field name="duration"/>
+                <field name="workers" widget="progressbar"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="projects_calendar_view">
+        <field name="name">project_management.calendar</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <calendar string="Projects Calendar" date_start="start_date" date_stop="end_date" color="manager_ids">
+                <field name="name"/>
+            </calendar>
+        </field>
+    </record>
+
+     <record model="ir.ui.view" id="project_view_kanban">
+        <field name="name">project_management.kanban</field>
+        <field name="model">project_management.projects</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="manager_ids">
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                                t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+<!--                            <div class="oe_dropdown_kanban">-->
+<!--                                &lt;!&ndash; dropdown menu &ndash;&gt;-->
+<!--                                <div class="oe_dropdown_toggle">-->
+<!--                                    <i class="fa fa-bars fa-lg" title="Manage" aria-label="Manage"/>-->
+<!--                                    <ul class="oe_dropdown_menu">-->
+<!--                                        <li>-->
+<!--                                            <a type="delete">Delete</a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <ul class="oe_kanban_colorpicker"-->
+<!--                                                data-field="color"/>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="oe_clear"></div>-->
+<!--                            </div>-->
+                            <div t-attf-class="oe_kanban_content">
+                                Project name:
+                                <field name="name"/>
+                                <br/>
+                                Start date:
+                                <field name="start_date"/>
+                                <br/>
+                                End date:
+                                <field name="end_date"/>
+                                <field name="workers" widget="gauge" style="width:100%;"/>
+                                 title
+                                <br/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="projects_list_action">
+        <field name="name">Projects</field>
+        <field name="res_model">project_management.projects</field>
+        <field name="view_mode">kanban,tree,form,calendar,graph,pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first project</p>
+        </field>
+    </record>
+
+    <menuitem id="main_projects_manager_menu" name="Projects manager"/>
+    <menuitem id="projects_manager_menu" name="Projects manager" parent="main_projects_manager_menu"/>
+    <menuitem id="projects_menu" name="Projects" parent="projects_manager_menu" action="projects_list_action"/>
+
+
+</odoo>
